@@ -163,7 +163,7 @@ public interface CaseReward {
      *
      * @return The numeric duration value as specified in the reward configuration, or {@code null} if not applicable.
      */
-    long getRawDuration();
+    Long getRawPermissionDuration();
 
     /**
      * Returns the time unit associated with this permission reward's duration.
@@ -174,7 +174,7 @@ public interface CaseReward {
      *
      * @return The {@link DurationUnit} corresponding to the configured duration, or {@code null} if not applicable.
      */
-    DurationUnit getDurationUnit();
+    DurationUnit getPermissionDurationUnit();
 
     /**
      * Returns the duration for which the permission granted by the reward is valid.
