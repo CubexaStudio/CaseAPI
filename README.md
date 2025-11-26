@@ -1,6 +1,6 @@
 # CaseAPI
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![Version](https://img.shields.io/badge/version-1.0.1-blue)
 [![License: GPL v3](https://img.shields.io/badge/license-GPLv3-blue)](./LICENSE)
 
 CaseAPI is a lightweight API designed to integrate seamlessly with the CaseOpening plugin. It allows other plugins to interact with cases, track statistics, and extend functionality. <br>
