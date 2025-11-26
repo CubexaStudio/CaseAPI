@@ -8,8 +8,8 @@ java {
     }
 }
 
-group = "org.tommy.caseapi"
-version = "1.0.0"
+group = "net.cubexa.caseapi"
+version = "1.0.1"
 
 tasks {
     compileJava {

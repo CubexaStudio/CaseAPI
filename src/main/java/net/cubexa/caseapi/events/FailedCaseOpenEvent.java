@@ -15,9 +15,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
-package org.tommy.caseapi.events;
+package net.cubexa.caseapi.events;
 
-import org.tommy.caseapi.models.Case;
+import net.cubexa.caseapi.models.Case;
 
 import java.util.UUID;
 

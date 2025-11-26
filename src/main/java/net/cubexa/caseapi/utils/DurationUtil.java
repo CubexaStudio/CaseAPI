@@ -15,9 +15,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
-package org.tommy.caseapi.utils;
+package net.cubexa.caseapi.utils;
 
-import org.tommy.caseapi.models.DurationUnit;
+import net.cubexa.caseapi.models.DurationUnit;
 
 import java.time.Duration;
 

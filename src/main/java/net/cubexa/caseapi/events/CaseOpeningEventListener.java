@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
-package org.tommy.caseapi.events;
+package net.cubexa.caseapi.events;
 
 /**
  * Listener interface for handling CaseOpening related events.

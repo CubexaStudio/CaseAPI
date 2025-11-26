@@ -15,37 +15,39 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
-package org.tommy.caseapi.events;
+package net.cubexa.caseapi.events;
 
-import org.tommy.caseapi.models.Case;
+import net.cubexa.caseapi.models.CaseReward;
+import net.cubexa.caseapi.models.Case;
 
 import java.util.UUID;
 
 /**
- * Event fired when a player attempts to open a case.
+ * Event fired when a player completes opening a case.
  * <p>
- * The event is cancelable. Cancelling the event will prevent the case from being opened.
+ * The event is not cancelable and cannot be prevented once triggered.
  */
-public class CaseOpenEvent {
+public class CaseOpenCompleteEvent {
 
     private final UUID playerUuid;
     private final Case crate;
-    private boolean isCancelled;
+    private final CaseReward caseReward;
 
     /**
-     * Constructs a new {@code CaseOpenEvent}.
+     * Constructs a new CaseOpenCompleteEvent.
      *
-     * @param playerUuid The UUID of the player who attempts to open the case.
-     * @param crate The {@link Case} the player is trying to open.
+     * @param playerUuid The UUID of the player who opened the case.
+     * @param crate The {@link Case} that was opened.
+     * @param caseReward The {@link CaseReward} obtained from the case.
      */
-    public CaseOpenEvent(UUID playerUuid, Case crate) {
+    public CaseOpenCompleteEvent(UUID playerUuid, Case crate, CaseReward caseReward) {
         this.playerUuid = playerUuid;
         this.crate = crate;
-        this.isCancelled = false;
+        this.caseReward = caseReward;
     }
 
     /**
-     * Gets the UUID of the player who attempts to open the case.
+     * Gets the UUID of the player who opened the case.
      *
      * @return The player's UUID.
      */
@@ -54,7 +56,7 @@ public class CaseOpenEvent {
     }
 
     /**
-     * Gets the {@link Case} the player is trying to open.
+     * Gets the {@link Case} that was opened.
      *
      * @return The {@link Case} instance.
      */
@@ -63,20 +65,11 @@ public class CaseOpenEvent {
     }
 
     /**
-     * Checks if the event has been cancelled.
+     * Gets the {@link CaseReward} obtained from the opened case.
      *
-     * @return {@code true} if the event is cancelled; {@code false} otherwise.
+     * @return The {@link CaseReward} instance.
      */
-    public boolean isCancelled() {
-        return isCancelled;
-    }
-
-    /**
-     * Sets the cancellation state of the event.
-     *
-     * @param cancelled {@code true} to cancel the event and prevent the case from opening; {@code false} to allow it.
-     */
-    public void setCancelled(boolean cancelled) {
-        isCancelled = cancelled;
+    public CaseReward getCaseReward() {
+        return caseReward;
     }
 }

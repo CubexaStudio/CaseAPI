@@ -15,9 +15,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
-package org.tommy.caseapi;
+package net.cubexa.caseapi;
 
-import org.tommy.caseapi.events.CaseOpeningEventListener;
+import net.cubexa.caseapi.events.CaseOpeningEventListener;
 
 import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
