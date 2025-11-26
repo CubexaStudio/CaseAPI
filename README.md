@@ -22,7 +22,7 @@ This API requires the CaseOpening plugin to be installed and running.
 <dependency>
     <groupId>com.github.cubexastudio</groupId>
     <artifactId>CaseAPI</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <scope>provided</scope>
 </dependency>
 ```
@@ -34,7 +34,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly("com.github.cubexastudio:CaseAPI:1.0.0")
+    compileOnly("com.github.cubexastudio:CaseAPI:1.0.1")
 }
 ```
 
