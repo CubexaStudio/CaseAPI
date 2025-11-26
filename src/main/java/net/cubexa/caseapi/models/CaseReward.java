@@ -19,6 +19,7 @@ package net.cubexa.caseapi.models;
 
 import java.time.Duration;
 import java.util.UUID;
+import java.util.concurrent.CompletableFuture;
 
 /**
  * Represents a reward within the CaseOpening plugin.
@@ -192,8 +193,8 @@ public interface CaseReward {
      * This method should <b>not</b> be called directly on manually created instances.
      *
      * @param playerUuid The UUID of the player to receive the reward.
-     * @return {@code true} if the process was successful; {@code false} otherwise.
+     * @return A {@link CompletableFuture} holding {@code true} if the process was successful; {@code false} otherwise.
      * @throws UnsupportedOperationException If called on a {@code CaseReward} without a specific type.
      */
-    boolean apply(UUID playerUuid);
+    CompletableFuture<Boolean> apply(UUID playerUuid);
 }
