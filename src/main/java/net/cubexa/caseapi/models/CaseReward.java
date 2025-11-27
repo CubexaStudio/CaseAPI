@@ -193,8 +193,9 @@ public interface CaseReward {
      * This method should <b>not</b> be called directly on manually created instances.
      *
      * @param playerUuid The UUID of the player to receive the reward.
+     * @param crate The {@link Case} from which the player has drawn the reward.
      * @return A {@link CompletableFuture} holding {@code true} if the process was successful; {@code false} otherwise.
      * @throws UnsupportedOperationException If called on a {@code CaseReward} without a specific type.
      */
-    CompletableFuture<Boolean> apply(UUID playerUuid);
+    CompletableFuture<Boolean> apply(UUID playerUuid, Case crate);
 }
